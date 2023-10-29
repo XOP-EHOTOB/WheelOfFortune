@@ -1,0 +1,100 @@
+.main {
+    background: rgb(237,39,171);
+    background: linear-gradient(218deg, rgba(237,39,171,1) 0%, rgba(4,118,255,1) 79%);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: aliceblue;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#wheel {
+    margin-top: 40px;
+    position: relative;
+    max-width: 400px;
+    max-height: 400px;
+    aspect-ratio: 1/1;
+}
+
+#canvas {
+    width: 100%;
+    height: 100%;
+    -webkit-box-shadow: 0px -2px 13px 9px rgba(34, 60, 80, 0.31);
+    -moz-box-shadow: 0px -2px 13px 9px rgba(34, 60, 80, 0.31);
+    box-shadow: 0px -2px 13px 9px rgba(34, 60, 80, 0.38);
+    border-radius: 50%;
+}
+
+#spin {
+    user-select: none;
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30%;
+    height: 30%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    color: #fff;
+    box-shadow: 0 0 0 8px currentColor, 0 0px 15px 5px rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+}
+
+#spin::after {
+    content: "";
+    position: absolute;
+    top: -17px;
+    border: 10px solid transparent;
+    border-bottom-color: currentColor;
+    border-top: none;
+}
+
+#arrow {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    width: 30px;
+    height: 30px;
+    background-image: url(/img/arrow.png);
+    background-size: 100%;
+    transform: translate(-50%, 0);
+}
+
+#spin-image {
+    width: 80%;
+    height: 80%;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    border-radius: 50%;
+    color: rgb(60, 60, 60);
+    transition: 0.05s;
+}
+
+#spin-image > p {
+    background: linear-gradient(218deg, rgba(237,39,171,1) 0%, rgba(4,118,255,1) 100%);
+}
+
+
+.spin-button:hover {
+    opacity: 0.9;
+    transform: scale(1.03);
+    transition: 0.1s;
+}
+
+.spin-button:active {
+    opacity: 0.8;
+    transform: scale(0.9);
+    transition: 0.2s;
+}
