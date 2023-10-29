@@ -56,7 +56,7 @@ const users = [
 const randCol = () => Math.round(Math.random() * 255)
 function upgradeUsers(user ,index) {
     user.color = `RGB(${randCol()}, ${randCol()}, ${randCol()})`
-    user.img =`https://xn----dtbi6acdalwx.xn--p1ai/WheelOfFortune/img/avataaars_${index + 1}.png`
+    user.img =`https://хор-енотов.рф/WheelOfFortune/img/avataaars_${index + 1}.png`
 }
 users.forEach(upgradeUsers)
 
